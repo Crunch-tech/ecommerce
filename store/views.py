@@ -4,9 +4,20 @@ from django.views.generic import CreateView
 from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
 
-# Create your views here.
+
+#  class view for the store page
 class HomeView(TemplateView):
-    template_name = "index.html"
+    template_name = "store.html"
+
+
+# class view for checkout page
+class CheckoutView(TemplateView):
+    template_name = "checkout.html"
+
+
+#  class view for cart page
+class CartView(TemplateView):
+    template_name = "cart.html"
 
 
 class SignupView(CreateView):
