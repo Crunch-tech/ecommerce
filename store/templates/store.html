@@ -1,0 +1,43 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container-fluid  pattern-2 col-md-12  mb-4 card">
+    <h3><strong><b>Get access to quality , affordable , fresh fruits and vegitables from our available
+                stock</b></strong></h3>
+    <p> <strong><u>Available store items</u></strong> </p>
+</div>
+<div class="alert">
+    <span class="badge badge-pill badge-dark">All Products prices are per Kilo gram</span>
+</div>
+
+<div class="row pt-5">
+    <div class="col-lg-6">
+        <img class="thumbnail" src="{% static 'img/tomatoes.jpeg' %}" style="width: 450px; height: 300px;">
+        <div class="box-element product">
+            <h6><strong>Product</strong></h6>
+            <hr>
+
+            <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+            <a class="btn btn-outline-success" href="#">View</a>
+            <h4 class="badge badge-warning"><strong>200 KSh</strong></h4>
+
+        </div>
+    </div>
+
+    <div class="col-lg-6">
+        <img class="thumbnail" src="{% static 'img/onions.jpeg' %}" style="width: 450px; height: 300px;>
+        <div class=" box-element product">
+        <h6><strong>Product</strong></h6>
+        <hr>
+
+        <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+        <a class="btn btn-outline-success" href="#">View</a>
+        <h4 class="badge badge-warning"><strong> 180 KSh</strong></h4>
+
+
+    </div>
+</div>
+
+
+{% endblock content %}
