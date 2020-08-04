@@ -15,29 +15,41 @@
     <link rel="stylesheet" href="{%static 'css/style.css' %}" />
 
 </head>
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
-    <a href="{% url 'store' %}" class="navbar-brand">E-Comm</a>
-    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+<style>
+    .container-fluid {
+        text-align: justified;
+        /* border: 2px solid; */
 
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav">
-            <a href="{% url 'store' %}" class="nav-item nav-link active">Store</a>
-            <a href="{% url 'registration' %}" class="nav-item nav-link">Register</a>
-            <a href="#" class="nav-item nav-link">Products</a>
+    }
+</style>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a href="{% url 'store' %}" class="navbar-brand">E-Comm</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+                <a href="{% url 'store' %}" class="nav-item nav-link active">Store</a>
+                <a href="{% url 'registration' %}" class="nav-item nav-link">Register</a>
+                <a href="#" class="nav-item nav-link">Products</a>
+            </div>
+            <form class="form-inline ml-auto">
+                <input type="text" class="form-control mr-sm-2" placeholder="Search">
+                <button type="submit" class="btn btn-outline-light">Search</button>
+            </form>
         </div>
-        <form class="form-inline ml-auto">
-            <input type="text" class="form-control mr-sm-2" placeholder="Search">
-            <button type="submit" class="btn btn-outline-light">Search</button>
-        </form>
-    </div>
-</nav>
+    </nav>
 
-<div class="container">
-    <br>
-    {% block content %}
-    {% endblock content %}
-</div>
+    <div class="container">
+        <br>
+        {% block content %}
+        {% endblock content %}
+    </div>
+
+</body>
 
 </html>
